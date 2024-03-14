@@ -1,8 +1,8 @@
 /* 
 Li Mei tiene una barra de jugos donde vende deliciosos jugos de frutas variados.
-Eres un cliente frecuente de su tienda y te diste cuenta de que podías hacerle la vida más
+Eres un cliente frecuente de su tinnda y te diste cuenta de que podías hacerle la vida más
 fácil a tu amiga. Decides utilizar tus habilidades de codificación para ayudar a Li Mei con
-su trabajo.
+su trabajo. 
 */
 //Funcion para el tiempo de preparacion
 function timeToMixJuice(jugo) {
