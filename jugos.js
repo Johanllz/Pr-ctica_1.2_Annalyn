@@ -93,7 +93,7 @@ function jugosEnEspera(tiempoRestante, jugosRestantes)
     {
         while(tiempoRestante > 0)
         {
-            tiempoRestante = tiempoRestante - timeToMixJuice(jugosRestantes[0]); // creo que hay un error aqui: (ReferenceError: timeToMixJuice is not defined)
+            tiempoRestante = tiempoRestante - timeToMixJuice(jugosRestantes[0]);
             tiempoRestante.shift();
         }
         return jugosRestantes;
