@@ -4,7 +4,7 @@ Eres un cliente frecuente de su tienda y te diste cuenta de que podías hacerle 
 fácil a tu amiga. Decides utilizar tus habilidades de codificación para ayudar a Li Mei con
 su trabajo.
 */
-//1_ Funcion para el tiempo de preparacion
+//1_ Funcion para el tiempo de preparacion---------------------------------------------------------------------
 function timeToMixJuice(jugo) {
     switch(jugo) { //gracias profe :)
         case 'Pure Strawberry Joy':
@@ -21,5 +21,44 @@ function timeToMixJuice(jugo) {
             return 2.5;
     }
 }
-// Reponer el suministro de rodajas de lima
 
+//console.log(timeToMixJuice('Tropical Island'));
+
+// 2_Reponer el suministro de rodajas de lima --------------------------------------------------------------------
+
+function limesToCut(cantidadNecesaria, limasDisponibles) {
+    let rodajasTotales = 0;
+    let limasParaCortar = 0;
+
+    for (let i = 0; i < limasDisponibles.length; i++) {
+        const lima = limasDisponibles[i];
+        let gajosPorLima;
+
+        switch (lima) {
+            case "pequeña":
+                gajosPorLima = 6;
+                break;
+            case "mediana":
+                gajosPorLima = 8;
+                break;
+            case "grande":
+                gajosPorLima = 10;
+                break;
+            default:
+                gajosPorLima = 0;
+        }
+
+        rodajasTotales += gajosPorLima;
+
+        if (rodajasTotales >= cantidadNecesaria) {
+            limasParaCortar = i + 1;
+            break;
+        }
+    }
+
+    return limasParaCortar;
+}
+
+const limasDisponibles = ["pequeña", "mediana", "grande", "pequeña"];
+const cantidadNecesaria = 25;
+console.log(limesToCut(cantidadNecesaria, limasDisponibles)); 
