@@ -25,6 +25,9 @@ function timeToMixJuice(jugo) {
 //console.log(timeToMixJuice('Tropical Island'));
 
 // 2_Reponer el suministro de rodajas de lima --------------------------------------------------------------------
+const limasDisponibles = ["pequeña", "grande", "grande", "grande"];
+const cantidadNecesaria = 30; //para el caso de 30 deberia dar 4
+console.log(limesToCut(cantidadNecesaria, limasDisponibles)); 
 
 function limesToCut(cantidadNecesaria, limasDisponibles) {
     let rodajasTotales = 0;
@@ -50,7 +53,7 @@ function limesToCut(cantidadNecesaria, limasDisponibles) {
 
         rodajasTotales += gajosPorLima;
 
-        if (rodajasTotales >= cantidadNecesaria) {
+        if (rodajasTotales >= cantidadNecesaria) { //romper ciclo cuando se alcancen las neceasrias
             limasParaCortar = i + 1;
             break;
         }
@@ -58,7 +61,3 @@ function limesToCut(cantidadNecesaria, limasDisponibles) {
 
     return limasParaCortar;
 }
-
-const limasDisponibles = ["pequeña", "mediana", "grande", "pequeña"];
-const cantidadNecesaria = 25;
-console.log(limesToCut(cantidadNecesaria, limasDisponibles)); 
