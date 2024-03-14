@@ -98,9 +98,7 @@ function jugosEnEspera(tiempoRestante, jugosRestantes)
         }
         return jugosRestantes;
     }
-
-    
-
-
-
 } 
+
+let jugosRestantes = ['All or Nothing', 'All or Nothing', 'Tropical Island', 'Energizer', 'Energizer', 'All or Nothing','Energizer','Energizer','Tropical Island','Pure Strawberry Joy'];
+let turnoDmitri = jugosEnEspera(20,jugosRestantes);
