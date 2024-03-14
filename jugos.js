@@ -53,7 +53,7 @@ function limesToCut(cantidadNecesaria, limasDisponibles) {
 
         rodajasTotales += gajosPorLima;
 
-        if (rodajasTotales >= cantidadNecesaria) { //romper ciclo cuando se alcancen las neceasrias
+        if (rodajasTotales >= cantidadNecesaria) { //romper ciclo cuando se alcancen las necesarias
             limasParaCortar = i + 1;
             break;
         }
@@ -93,7 +93,7 @@ function jugosEnEspera(tiempoRestante, jugosRestantes)
     {
         while(tiempoRestante > 0)
         {
-            tiempoRestante = tiempoRestante - timeToMixJuice(jugosRestantes[0]);
+            tiempoRestante = tiempoRestante - timeToMixJuice(jugosRestantes[0]); // creo que hay un error aqui: (ReferenceError: timeToMixJuice is not defined)
             tiempoRestante.shift();
         }
         return jugosRestantes;
