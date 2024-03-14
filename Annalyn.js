@@ -6,20 +6,20 @@ function determinarAcciones(caballeroDurmiendo, arqueroDormido, prisioneroDespie
     }
 
     if (!caballeroDurmiendo || !arqueroDormido) {
-        accionesPosibles.push("Espía - ");
+        accionesPosibles.push("Espía - ya que al menos uno de ellos está despierto. ");
     }
 
     if (prisioneroDespierto && arqueroDormido) {
-        accionesPosibles.push("Señalizar al prisionero");
+        accionesPosibles.push("Señalizar al prisionero - se puede señalar al prisionero con sonidos de pajaros, como claves secretas");
     }
 
     if (perroPresente) {
         if (arqueroDormido) {
-            accionesPosibles.push("Rescate del prisionero");
+            accionesPosibles.push("Rescate del prisionero - El caballero le teme al perro, y el arquero esta mimiendo");
         }
-    } else {
+    } else { //No hay perro
         if (prisioneroDespierto && !caballeroDurmiendo && !arqueroDormido) {
-            accionesPosibles.push("Rescate del prisionero");
+            accionesPosibles.push("Rescate del prisionero - Hay que ser astutos");
         }
     }
 
@@ -28,4 +28,4 @@ function determinarAcciones(caballeroDurmiendo, arqueroDormido, prisioneroDespie
 
 const accionesDisponibles = determinarAcciones(true, true, true, true);
 console.log(accionesDisponibles); 
-// Parece que todas las acciones estan hechas, aunque tal vez me daltan mas acciones con el perro
+// Parece que todas las acciones estan hechas, aunque tal vez me faltan mas acciones con el perro
