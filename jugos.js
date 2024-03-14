@@ -94,7 +94,7 @@ function jugosEnEspera(tiempoRestante, jugosRestantes)
         while(tiempoRestante > 0)
         {
             tiempoRestante = tiempoRestante - timeToMixJuice(jugosRestantes[0]);
-            tiempoRestante.shift();
+            jugosRestantes.shift();
         }
         return jugosRestantes;
     }
