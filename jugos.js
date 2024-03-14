@@ -4,7 +4,7 @@ Eres un cliente frecuente de su tinnda y te diste cuenta de que podías hacerle 
 fácil a tu amiga. Decides utilizar tus habilidades de codificación para ayudar a Li Mei con
 su trabajo. 
 */
-//Funcion para el tiempo de preparacion
+//Funcion para el tiempo de preparacion-----------------------------------------------------------------------------------------
 function timeToMixJuice(jugo) {
     switch(jugo) { //gracias profe :)
         case 'Pure Strawberry Joy':
@@ -21,13 +21,13 @@ function timeToMixJuice(jugo) {
             return 2.5;
     }
 }
-
-//console.log(timeToMixJuice('Tropical Island'));
+const tiempoDePreparacion = timeToMixJuice('Tropical Island');
+console.log("El tiempo de preparación es: " + tiempoDePreparacion);
 
 // 2_Reponer el suministro de rodajas de lima --------------------------------------------------------------------
 const limasDisponibles = ["pequeña", "grande", "grande", "grande"];
 const cantidadNecesaria = 30; //para el caso de 30 deberia dar 4
-console.log(limesToCut(cantidadNecesaria, limasDisponibles)); 
+console.log("La cantidad de limas para cortar es: " + limesToCut(cantidadNecesaria, limasDisponibles)); 
 
 function limesToCut(cantidadNecesaria, limasDisponibles) {
     let rodajasTotales = 0;
@@ -61,6 +61,7 @@ function limesToCut(cantidadNecesaria, limasDisponibles) {
 
     return limasParaCortar;
 }
+
 
 
 
