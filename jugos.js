@@ -4,7 +4,7 @@ Eres un cliente frecuente de su tienda y te diste cuenta de que podías hacerle 
 fácil a tu amiga. Decides utilizar tus habilidades de codificación para ayudar a Li Mei con
 su trabajo.
 */
-//Funcion para el tiempo de preparacion
+//1_ Funcion para el tiempo de preparacion
 function timeToMixJuice(jugo) {
     switch(jugo) { //gracias profe :)
         case 'Pure Strawberry Joy':
@@ -21,4 +21,5 @@ function timeToMixJuice(jugo) {
             return 2.5;
     }
 }
+// Reponer el suministro de rodajas de lima
 
